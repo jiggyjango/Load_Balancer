@@ -2,20 +2,20 @@ package middleware
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
-	"fmt"
 	"strings"
 )
 
 // LoadConfig loads a JSON configuration file and sets each field as an environment variable.
 func LoadConfig(filePath string) error {
 
-	fmt.println("file path",filePath)
-	
+	fmt.Println("Loading config from", filePath)
+
 	file, err := os.Open(filePath)
 	if err != nil {
-		fmt.println("err opeining file",err)
+		fmt.Println("Error opening config file:", err)
 		return err
 	}
 	defer file.Close()
