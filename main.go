@@ -70,7 +70,7 @@ func main() {
 	})
 
 	// Start the load balancer server
-	if err := app.Listen(os.Getenv("PORT")); err != nil {
+	if err := app.Listen("0.0.0.0:3000"); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }
