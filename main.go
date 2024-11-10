@@ -3,7 +3,6 @@ package main
 import (
 	middleware "LOAD_BALANCER_SERVICE/middlewares"
 	"log"
-	"os"
 	"strings"
 	"sync/atomic"
 
@@ -33,7 +32,8 @@ func main() {
 
 	middleware.LoadConfig("config.json")
 
-	backendStr := os.Getenv("BACKENDS")
+	backendStr := "https://comparable-stormi-tesjiggy-c2c6a289.koyeb.app/"
+
 	backends := strings.Split(backendStr, ",")
 
 	// Initialize load balancer
