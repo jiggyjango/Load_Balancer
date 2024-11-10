@@ -30,6 +30,7 @@ func LoadConfig(filePath string) error {
 	for key, value := range config {
 		switch v := value.(type) {
 		case string:
+			fmt.Println("Setting", key, "to", v)
 			os.Setenv(key, v)
 		case []interface{}:
 			// Join array elements into a single comma-separated string
