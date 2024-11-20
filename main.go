@@ -32,7 +32,7 @@ func main() {
 
 	middleware.LoadConfig("config.json")
 
-	backendStr := "https://comparable-stormi-tesjiggy-c2c6a289.koyeb.app"
+	backendStr := "https://prickly-tanhya-tesjiggy-3cdfbdb8.koyeb.app,https://marginal-renelle-uploadkaro9-8326fa7b.koyeb.app,https://indirect-tiffany-uploadkarojayesh-4e9efecf.koyeb.app,https://rough-zandra-uploadkarotwo-74e3ac06.koyeb.app"
 
 	backends := strings.Split(backendStr, ",")
 
